@@ -79,4 +79,11 @@ If you only have one 2D array, it might be more difficult to keep track of the _
 To run it, navigate to `src/life/Main` and find `public static void main()` near the bottom of the file
   - If everything works, you should see a green arrow to the left of `public static void main()` which you can click to `Run 'Main.main()'`
   - Let IntelliJ compile what it needs to, and you should see a new window with a sweeping crosshairs animation.
-- Once you get this far, you're all set up to start implementing the game.
+
+# Getting started with BlueJ
+
+- `Download ZIP` from the green `Clone or download` button above
+- Start BlueJ
+- Open ZIP/JAR from the `Project` menu
+  - BlueJ will warn you about not being at the top level, but it is ok
+- You should be able to run `Main`.`main()` as usual and you should see a new window with a sweeping crosshairs animation.
