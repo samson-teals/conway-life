@@ -59,3 +59,24 @@ If you only have one 2D array, it might be more difficult to keep track of the _
 
 - Can you modify the rules to create interesting new behaviour?
 - What can you do if you use a 2D array of e.g. `int` instead of `boolean`? Can you use that to keep track of another attribute of each cell, e.g. the age of the cell?
+
+# Getting started with IntelliJ
+
+- Start IntelliJ
+- From the welcome dialog, select "Check out form Version Control"
+  - Select "Git" from the dropdown
+- Copy and paste in the url: `git@github.com:samson-teals/conway-life.git`
+  - Optionally choose a target directory
+  - Click "Clone"
+- Click "Yes" when IntelliJ asks if you would like to create an IntelliJ project from sources
+  - Choose "Create project from existing sources"
+  - Click "Next"
+  - Optionally modify the project name or location
+  - Click "Next" again
+  - Accept the checked off source location
+  - Click "Next" until you can click "Finish"
+- IntelliJ should have created a starter project for you.
+To run it, navigate to `src/life/Main` and find `public static void main()` near the bottom of the file
+  - If everything works, you should see a green arrow to the left of `public static void main()` which you can click to `Run 'Main.main()'`
+  - Let IntelliJ compile what it needs to, and you should see a new window with a sweeping crosshairs animation.
+- Once you get this far, you're all set up to start implementing the game.
