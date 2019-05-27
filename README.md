@@ -36,6 +36,8 @@ Eventually, you will replace `Sweep` (or `SweepBounce`) with your own class that
 Only cells that are alive are painted.
 Specifically, `Main`'s `GridCanvas`.`paintGrid` method uses `isAlive`.
 
+This method returns a `boolean`. Return `true` if the cell is "alive".
+
 ### init
 
 `Main`'s `main` method is set up to call a `LifeGrid` class' `init` method after it is created.
@@ -54,6 +56,8 @@ This allows us to animate the game.
 You may want to create two 2D arrays of type `boolean` to implement the rules.
 Remember that the _next_ iteration of the grid is generated from the _current_ iteration.
 If you only have one 2D array, it might be more difficult to keep track of the _current_ state while you are calculating the _next_ state.
+
+Alternatively, another way to keep track of a _next_ state separate from the _current_ state is to have a 2D array of objects that can keep track of both the _current_ and _next_ states.
 
 ## Experiments
 
