@@ -12,12 +12,14 @@ public class Main {
      */
     class GridCanvas extends Canvas {
         int squareSize;
+        int windowOffset;
 
-        public GridCanvas(int width, int height, int squareSize) {
+        public GridCanvas(int width, int height, int squareSize, int windowOffset) {
             setBackground(Color.WHITE);
-            setSize(width * squareSize, height * squareSize);
+            setSize(width * squareSize, windowOffset + height * squareSize);
 
             this.squareSize = squareSize;
+            this.windowOffset = windowOffset;
         }
 
         /**
@@ -35,7 +37,7 @@ public class Main {
                 for (int j = 0; j < grid.getSizeY(); j++) {
                     if (grid.isAlive(i, j)) {
                         g.setColor(Color.red);
-                        g.fillRect(i * squareSize, j * squareSize, squareSize, squareSize);
+                        g.fillRect(i * squareSize, windowOffset + j * squareSize, squareSize, squareSize);
                     }
                 }
             }
@@ -48,12 +50,13 @@ public class Main {
 
         // sets up graphics
         Frame frame = new Frame("Conway's Game of Life");
-        Canvas canvas = new GridCanvas(grid.getSizeX(), grid.getSizeY(), squareSize);
+        frame.setVisible(true);
+        Insets insets = frame.getInsets();
 
+        Canvas canvas = new GridCanvas(grid.getSizeX(), grid.getSizeY(), squareSize, insets.top);
         frame.add(canvas);
         frame.setLayout(null);
         frame.setSize(canvas.getWidth(), canvas.getHeight());
-        frame.setVisible(true);
 
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
